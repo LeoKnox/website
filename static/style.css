@@ -1,0 +1,20 @@
+body {
+    color: #bc5a45;
+    background-color: #f4e1d2;
+}
+
+h2, h3 {
+    border-bottom: 2px solid #bc5a45;
+}
+
+.topper {
+    background-color: #f18973;
+}
+
+.mynavbar {
+    background-color: #b2b2b2;
+}
+
+.acting {
+    background-color: #f18973;
+}
