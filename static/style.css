@@ -4,13 +4,16 @@ body {
 }
 
 img {
-    box-shadow: 4px 4px 6px #f18973;
+    box-shadow: 4px 4px 6px #b2b2b2;
     margin-bottom: 8px;
 }
 
 h2, h3 {
-    border-bottom: 2px solid #f18973;
-    border-right: 2px solid #f18973;
+    padding-left: 10px;
+    border: 2px solid #f18973;
+    border-top: 0;
+    border-left: 0;
+    border-radius: 0 0 10px 10px;
 }
 
 .topper {
