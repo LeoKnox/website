@@ -9,7 +9,8 @@ img {
 }
 
 h2, h3 {
-    border-bottom: 2px solid #bc5a45;
+    border-bottom: 2px solid #f18973;
+    border-right: 2px solid #f18973;
 }
 
 .topper {
