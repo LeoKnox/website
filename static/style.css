@@ -3,6 +3,11 @@ body {
     background-color: #f4e1d2;
 }
 
+img {
+    box-shadow: 4px 4px 6px #f18973;
+    margin-bottom: 8px;
+}
+
 h2, h3 {
     border-bottom: 2px solid #bc5a45;
 }
