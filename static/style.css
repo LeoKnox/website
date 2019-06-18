@@ -27,3 +27,8 @@ h2, h3 {
 .acting {
     background-color: #f18973;
 }
+
+.form_button {
+    margin: 10px 0 0 5px;
+    border-radius: 4px;
+}

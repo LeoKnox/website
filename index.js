@@ -10,8 +10,8 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
-app.get('/location', (req, res)  => {
-    res.render('location');
+app.get('/mail', (req, res)  => {
+    res.render('mail');
 })
 
 app.listen(3000, () => {
