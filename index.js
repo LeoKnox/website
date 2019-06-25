@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const nodemailer = require('nodemailer');
 const path = require('path');
 
 app.use(express.static(path.join(__dirname, './static')));
@@ -12,6 +13,10 @@ app.get('/', (req, res) => {
 
 app.get('/mail', (req, res)  => {
     res.render('mail');
+})
+
+app.post('/mail', (req, res) => {
+    res.redirect('mail');
 })
 
 app.listen(3000, () => {
