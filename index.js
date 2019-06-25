@@ -16,6 +16,16 @@ app.get('/mail', (req, res)  => {
 })
 
 app.post('/mail', (req, res) => {
+    let fakeAccount = await nodemailer.createTestAccount();
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.ethereal.email',
+        secure: 'true',
+        port: '465',
+        auth: {
+            user: fakeAccount.user,
+            pass: fakeAccount.pass
+        }
+    })
     res.redirect('mail');
 })
 
