@@ -16,16 +16,24 @@ app.get('/mail', (req, res)  => {
 })
 
 app.post('/mail', (req, res) => {
-    let fakeAccount = await nodemailer.createTestAccount();
+    let fakeAccount = nodemailer.createTestAccount();
     let transporter = nodemailer.createTransport({
         host: 'smtp.ethereal.email',
-        secure: 'true',
+        secure: 'true', // true for 465, false for other ports
         port: '465',
         auth: {
             user: fakeAccount.user,
             pass: fakeAccount.pass
         }
     })
+    let info = transporter.sendMail({
+        from: '"Fluffy Links" <foo@example.com>',
+        to: "one@two.com, two@one.com",
+        subject: "Hello",
+        text: "Hello worlds"
+    })
+    console.log("Message sent:  %s", info.messageId);
+    console.log("preview url: %s", nodemailer.getTestMessageUrl(info));
     res.redirect('mail');
 })
 
